@@ -1,0 +1,5 @@
+deps:
+  - pbkit/interface-lol-champion-server@main
+root:
+  lock:
+    pbkit/interface-lol-champion-server@main: be26d9a605028630d9408cbc82a14a06e6d12686

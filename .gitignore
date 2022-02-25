@@ -1,0 +1,8 @@
+# Binary
+lol-champion-server
+
+# Protoc-generated files
+src/gen
+
+# Pollapo-generated files
+.pollapo
