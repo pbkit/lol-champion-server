@@ -1,11 +1,10 @@
 FROM denoland/deno:alpine AS POLLAPO
-ARG GITHUB_TOKEN
 RUN apk add git
 RUN git clone https://github.com/pbkit/pbkit.git
 RUN deno install -n pollapo -A --unstable pbkit/cli/pollapo/entrypoint.ts
 COPY . /work
 WORKDIR /work
-RUN pollapo install -t ${GITHUB_TOKEN}
+RUN pollapo install
 
 FROM golang:1.17-bullseye AS BUILD
 RUN apt update && apt install -y protobuf-compiler
